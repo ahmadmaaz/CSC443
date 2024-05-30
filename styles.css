@@ -1,0 +1,241 @@
+/* Import 2 family fonts , Cormorant for title and Jost for paragraphs */
+@import url("https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap");
+
+@import url("./buttons.css");
+@import url("./flex.css");
+@import url("./spacing.css");
+
+
+/* Normal font is Jost*/
+html {
+    scroll-behavior: smooth;
+    font-family: "Jost", sans-serif !important;
+    height: 100%;
+    overflow-x: hidden;
+    font-weight: 400 !important;
+}
+
+body {
+    margin: 0;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+/* some utility classes for text and background colors ( color palette)*/
+.text-primary {
+    color: #426b1f;
+}
+
+.text-seconday {
+    color: #d9e1d2;
+}
+
+.text-seconday {
+    color: #d6edc2;
+}
+
+.bg-primary {
+    background-color: #426b1f;
+}
+
+.bg-seconday {
+    background-color: #d9e1d2;
+}
+
+.bg-seconday {
+    background-color: #d6edc2;
+}
+
+.container {
+    width: 91.666667%;
+
+}
+
+
+
+.hidden {
+    display: none;
+}
+
+.overflow-hidden {
+    overflow: hidden;
+}
+
+.font-Cormorant {
+    font-family: "Cormorant Garamond", serif;
+}
+
+
+/* styling for navbar and for footer */
+nav {
+    display: flex;
+    padding: 1rem;
+    justify-content: space-between;
+    align-items: center;
+    height: 132px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+
+.nav-items-container-desktop {
+    display: none;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.nav-button-desktop {
+    display: none;
+    gap: 1.5rem;
+    justify-content: center;
+    align-items: center;
+}
+
+#nav-burger-menu {
+    display: block;
+}
+
+.nav-item-desktop {
+    font-size: 0.75rem;
+    line-height: 1rem;
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+
+
+}
+
+
+
+
+
+.nav-item-mobile {
+    font-weight: 700;
+    color: #000000;
+    text-transform: uppercase;
+    transition-property: all;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+    transition-duration: 300ms;
+}
+
+.nav-item-mobile:hover {
+    color: #426b1f;
+}
+
+
+footer {
+    background-color: #426b1f;
+    display: flex;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    margin-top: 3rem;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+footer .container {
+    display: grid;
+    padding-bottom: 2rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+    gap: 1.5rem;
+    border-width: 0;
+    border-bottom-width: 0.25px;
+    border-color: #D1D5DB;
+    border-style: solid;
+
+}
+
+footer .intro {
+    display: flex;
+    padding-right: 3rem;
+    flex-direction: column;
+    gap: .5rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-width: 0;
+    border-color: #D1D5DB;
+    color: #ffffff;
+}
+
+footer .info {
+    display: flex;
+    padding-left: 0;
+    padding-right: 0;
+    flex-direction: column;
+    gap: 0.5rem;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    color: #ffffff !important;
+
+}
+
+footer a {
+    color: #ffffff !important;
+}
+
+@media (min-width: 768px) {
+    nav {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+
+    .nav-items-container-desktop,
+    .nav-button-desktop {
+        display: flex;
+    }
+
+    #nav-burger-menu {
+        display: none;
+    }
+
+    footer .container {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 0;
+    }
+
+    footer .intro {
+        border-color: #D1D5DB;
+        border-right-width: 0.25px;
+        border-style: solid;
+    }
+
+    footer .info {
+        padding-left: 3rem;
+        padding-right: 3rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container {
+        width: 83.333333%;
+    }
+
+    nav {
+        padding-left: 4rem;
+        padding-right: 4rem;
+    }
+}
+
+@media (min-width: 1280px) {
+    .container {
+        width: 75%;
+    }
+}
+
+@media (min-width: 1536px) {
+    .container {
+        width: 65%;
+
+    }
+}
+
